@@ -1,11 +1,20 @@
 
 
 ### IntelliJ IDEA ###
+
 .idea/
+
 target/
+
 .mvn/
+
+src/main/resources
 *.iws
+
 *.iml
+
 *.ipr
+
 *.cmd
+
 mvnw
