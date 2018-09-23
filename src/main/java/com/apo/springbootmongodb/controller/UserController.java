@@ -1,6 +1,6 @@
 package com.apo.springbootmongodb.controller;
 
-import com.apo.springbootmongodb.Service.UserService;
+import com.apo.springbootmongodb.service.UserService;
 import com.apo.springbootmongodb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,5 +37,10 @@ public class UserController {
     @DeleteMapping("/id/{id}")
     public void deleteUser(@PathVariable("id") String id){
         userService.deleteUserById(id);
+    }
+
+    @GetMapping("/upcoming")
+    public List<String> getUsersWithUpcomingEvent(){
+        return userService.getUsersUpcomingEvent();
     }
 }

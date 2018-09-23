@@ -1,4 +1,4 @@
-package com.apo.springbootmongodb.Service;
+package com.apo.springbootmongodb.service;
 
 import com.apo.springbootmongodb.model.User;
 
@@ -10,4 +10,5 @@ public interface UserService {
     void deleteUserById(String id);
     User getUserById(String id);
     List<User> getAllUsers();
+    List<String> getUsersUpcomingEvent();
 }

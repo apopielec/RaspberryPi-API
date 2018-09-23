@@ -8,16 +8,16 @@ public class User {
 
     @Id
     private String id;
-    private String firstName, lastName, birthday, nameday;
+    private String firstName, lastName;
+    private Date date;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String birthday, String nameday) {
+    public User(String firstName, String lastName, Date date) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthday = birthday;
-        this.nameday = nameday;
+        this.date = date;
     }
 
     public String getId() {
@@ -28,31 +28,11 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getNameday() {
-        return nameday;
-    }
-
-    public void setNameday(String nameday) {
-        this.nameday = nameday;
+    public Date getDate() {
+        return date;
     }
 }
