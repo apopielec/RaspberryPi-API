@@ -18,13 +18,13 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public List<User> getAllUsers(){
         List<User> list = userService.getAllUsers();
         return list;
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public User getUserById(@PathVariable("id") String id){
         return userService.getUserById(id);
     }
@@ -34,13 +34,8 @@ public class UserController {
         userService.addUser(user);
     }
 
-    @DeleteMapping("/id/{id}")
+    @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable("id") String id){
         userService.deleteUserById(id);
-    }
-
-    @GetMapping("/upcoming")
-    public List<String> getUsersWithUpcomingEvent(){
-        return userService.getUsersUpcomingEvent();
     }
 }
