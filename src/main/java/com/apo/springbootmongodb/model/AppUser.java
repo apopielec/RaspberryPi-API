@@ -13,7 +13,6 @@ public class AppUser {
     private String role;
 
     public AppUser(){
-
     }
 
     public AppUser(String username, String password, String role) {

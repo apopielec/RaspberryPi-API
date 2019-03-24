@@ -17,17 +17,17 @@ public class AppUserController {
         this.appUserService = appUserService;
     }
 
-    @GetMapping("/users")
+    @GetMapping("/user")
     List<AppUser> getAllAppUsers(){
         return appUserService.findAll();
     }
 
-    @GetMapping("/users/{username}")
+    @GetMapping("/user/{username}")
     AppUser getAppUserByUsername(@PathVariable("username") String username){
         return appUserService.findByUsername(username);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/user")
     void addAppUser(@RequestBody AppUser appUser){
         appUserService.save(appUser);
     }

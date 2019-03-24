@@ -8,7 +8,8 @@ public class User {
 
     @Id
     private String id;
-    private String firstName, lastName;
+    private String firstName;
+    private String lastName;
     private Date date;
 
     public User() {

@@ -2,7 +2,10 @@ package com.apo.springbootmongodb.model;
 
 public class Date {
 
-    private int birthDay, birthMonth, nameDay, nameMonth;
+    private int birthDay;
+    private int birthMonth;
+    private int nameDay;
+    private int nameMonth;
 
     public Date() {
     }
